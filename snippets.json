@@ -1,0 +1,32 @@
+{
+    "For Loop": {
+      "prefix": ["for"],
+      "body": ["for (var ${1:id} = ${2:exp}; ${3:cond}; ${4:update}) {", "\t$0", "}"],
+      "description": "A for loop."
+    },
+    "While Loop": {
+      "prefix": ["while"],
+      "body": ["while (${1:condition}) {", "\t$0", "}"],
+      "description": "A while loop."
+    },
+    "If": {
+      "prefix": ["if"],
+      "body": ["if (${1:condition}) {", "\t$0", "}"],
+      "description": "An if statement."
+    },
+    "If Else": {
+      "prefix": ["if-else"],
+      "body": ["if (${1:condition}) {", "\t$2", "} else {", "\t$3", "}"],
+      "description": "An if statement."
+    },
+    "Else": {
+      "prefix": ["else"],
+      "body": ["else {", "\t$0", "}"],
+      "description": "An else statement."
+    },
+    "Else If": {
+      "prefix": ["else-if"],
+      "body": ["else if (${1:condition}) {", "\t$0", "}"],
+      "description": "An else if statement."
+    },
+  }

@@ -1,0 +1,53 @@
+{
+    "name": "oat",
+    "displayName": "Oat Intellisense",
+    "description": "Syntax Highlighting and Code Completion for Princeton COS 320's Oat language",
+    "author": "Tigar Cyr",
+    "license": "MIT",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Snippets"
+    ],
+    "activationEvents": [
+		"onLanguage:oat"
+	],
+    "main": "./client/out/extension",
+    "contributes": {
+        "languages": [
+            {
+                "id": "oat",
+                "aliases": [
+                    "Oat",
+                    "oat"
+                ],
+                "extensions": [
+                    ".oat"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "oat",
+                "scopeName": "source.oat",
+                "path": "./syntaxes/oat.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "oat",
+                "path": "./snippets.json"
+            }
+        ],
+        "commands": [
+			{
+				"command": "extension.helloWorld",
+				"title": "Hello World"
+			}
+		]
+    }
+}

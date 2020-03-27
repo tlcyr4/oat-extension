@@ -1,0 +1,54 @@
+fileTypes:
+    - oat
+scopeName: source.oat
+patterns:
+    -
+        match: \b(int|bool|string|void)\b
+        name: storage.type.oat
+    -
+        name: keyword.control.oat
+        match: \b(if|else|for|while|return|var|global|new)\b
+    -
+        match: \b(global|var)\b
+        name: storage.modifier.oat
+    -
+        match: ';|,'
+        name: punctuation.separator.oat
+    -
+        include: '#exp'
+    -
+        name: keyword.operator.oat
+        match: '\b(\+|-|\*|==|!=|<|<=|>|>=|&|\||\[&\]|\[\|\]|<<|>>|>>>|!)\b'
+    -
+        name: keyword.operator.assignment.oat
+        match: '='
+repository:
+    exp:
+        patterns:
+            -
+                match: \b(\d+)\b
+                name: constant.numeric.oat
+            -
+                name: constant.language.oat
+                match: \b(true|false|null)\b
+            -
+                begin: '"'
+                beginCaptures:
+                    '0': {name: punctuation.definition.string.begin.oat}
+                captures:
+                    '0': {name: string.quoted.double.oat}
+                end: '"'
+                endCaptures:
+                    '0': {name: punctuation.definition.string.end.oat}
+                name: constant.string.oat
+            -
+                begin: '([a-zA-Z][\w]*)\s*\('
+                end: \)
+                beginCaptures:
+                    '1': {name: entity.name.function.oat}
+                patterns:
+                    - {include: $self}
+                name: meta.function.call.oat
+            -
+                match: '\b([a-zA-Z]\w*)\b'
+                name: variable.other.oat
