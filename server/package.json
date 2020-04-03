@@ -1,15 +1,15 @@
 {
-	"name": "lsp-sample-server",
-	"description": "Example implementation of a language server in node.",
-	"version": "1.0.0",
-	"author": "Microsoft Corporation",
+	"name": "oat-lsp-server",
+	"description": "LSP language server for Oat language",
+	"version": "0.0.1",
+	"author": "Tigar Cyr",
 	"license": "MIT",
 	"engines": {
 		"node": "*"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/Microsoft/vscode-extension-samples"
+		"url": "https://github.com/tlcyr4/oat-extension"
 	},
 	"dependencies": {
 		"@types/node": "^13.9.8",
