@@ -13,8 +13,8 @@
         "Snippets"
     ],
     "activationEvents": [
-		"onLanguage:oat"
-	],
+        "onLanguage:oat"
+    ],
     "main": "./client/out/extension",
     "contributes": {
         "languages": [
@@ -34,7 +34,7 @@
             {
                 "language": "oat",
                 "scopeName": "source.oat",
-                "path": "./syntaxes/oat.tmLanguage"
+                "path": "./syntaxes/oat.tmLanguage.json"
             }
         ],
         "snippets": [
@@ -44,10 +44,17 @@
             }
         ],
         "commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
-    }
+            {
+                "command": "extension.helloWorld",
+                "title": "Hello World"
+            }
+        ]
+    },
+	"scripts": {
+		"vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+		"compile": "tsc -b",
+		"watch": "tsc -b -w",
+		"postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
+		"test": "sh ./scripts/e2e.sh"
+	}
 }
