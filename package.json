@@ -3,7 +3,10 @@
     "displayName": "Oat Intellisense",
     "description": "Syntax Highlighting and Code Completion for Princeton COS 320's Oat language",
     "author": "Tigar Cyr",
+    "publisher": "tlcyr4",
+    "repository": "https://github.com/tlcyr4/oat-extension.git",
     "license": "MIT",
+    "icon" : "images/oats_oat_breakfast_healthy.jpg",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.43.0"
