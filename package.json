@@ -4,7 +4,7 @@
     "description": "Syntax Highlighting and Code Completion for Princeton COS 320's Oat language",
     "author": "Tigar Cyr",
     "publisher": "tlcyr4",
-    "repository": "https://github.com/tlcyr4/oat-extension.git",
+    "repository": "https://github.com/tlcyr4/oat-extension",
     "license": "MIT",
     "icon" : "images/oats_oat_breakfast_healthy.jpg",
     "version": "0.0.1",
