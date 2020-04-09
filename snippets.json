@@ -1,7 +1,7 @@
 {
     "For Loop": {
       "prefix": ["for"],
-      "body": ["for (var ${1:id} = ${2:exp}; ${3:cond}; ${4:update}) {", "\t$0", "}"],
+      "body": ["for (var ${1:id} = ${2:exp}; ${3:cond}; ${4:update};) {", "\t$0", "}"],
       "description": "A for loop."
     },
     "While Loop": {
