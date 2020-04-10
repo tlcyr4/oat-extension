@@ -6,4 +6,20 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+## [0.0.1] - 2020-04-06
+
+### Added
+
+- Syntax Highlighting
+- Code Snippets
+- Syntax Error Diagnostics
+
+## [0.1.0] - 2020-04-10
+
+### Added
+
+- Error Recovery for parsing
+
+### Changed
+
+- For loop snippet now includes semicolon for update statement

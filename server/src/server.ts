@@ -16,16 +16,16 @@
 
 import {tmpNameSync} from 'tmp';
 import {writeFileSync} from 'fs';
-declare interface parser_pos {
+declare interface compiler_pos {
 	line : number;
 	char : number;
 }
-declare interface parser_range {
+declare interface compiler_range {
 	file: string;
-	start: parser_pos;
-	finish : parser_pos;
+	start: compiler_pos;
+	finish : compiler_pos;
 }
-const parser = require('./parser');
+const compiler = require('./compiler');
 
 // Create a connection for the server. The connection uses Node's IPC as a transport.
 // Also include all preview / proposed LSP features.
@@ -38,10 +38,7 @@ let documents: TextDocuments = new TextDocuments();
 connection.onInitialize((params: InitializeParams) => {
 	return {
 		capabilities: {
-			textDocumentSync: documents.syncKind,
-			completionProvider: {
-				resolveProvider: false
-			}
+			textDocumentSync: documents.syncKind
 		}
 	};
 });
@@ -58,16 +55,16 @@ documents.onDidChangeContent(change => {
 });
 
 async function validateTextDocument(textDocument: TextDocument): Promise<void> {
-	console.log("server validate");
+	// console.log("server validate");
 
 	// To pass files to the compiler, write to temp file and pass name
 	let tmpFileName = tmpNameSync();
 	let text = textDocument.getText();
 	writeFileSync(tmpFileName, text);
 
-	let errors : Array<parser_range> = parser.compile([tmpFileName]);
+	let errors : Array<compiler_range> = compiler.compile([tmpFileName]);
 	let diagnostics: Diagnostic[] = errors.map(
-		function (error : parser_range):Diagnostic {
+		function (error : compiler_range):Diagnostic {
 			let start = error.start;
 			let end = error.finish;
 			let diagnostic:Diagnostic = {

@@ -28,5 +28,5 @@
       "prefix": ["else-if"],
       "body": ["else if (${1:condition}) {", "\t$0", "}"],
       "description": "An else if statement."
-    },
+    }
   }
