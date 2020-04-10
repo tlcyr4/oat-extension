@@ -14,14 +14,13 @@
 	Position,
 } from 'vscode-languageserver';
 
-import {tmpNameSync} from 'tmp';
-import {writeFileSync} from 'fs';
+// import {tmpNameSync} from 'tmp';
+// import {writeFileSync} from 'fs';
 declare interface compiler_pos {
 	line : number;
 	char : number;
 }
 declare interface compiler_range {
-	file: string;
 	start: compiler_pos;
 	finish : compiler_pos;
 }
@@ -57,12 +56,7 @@ documents.onDidChangeContent(change => {
 async function validateTextDocument(textDocument: TextDocument): Promise<void> {
 	// console.log("server validate");
 
-	// To pass files to the compiler, write to temp file and pass name
-	let tmpFileName = tmpNameSync();
-	let text = textDocument.getText();
-	writeFileSync(tmpFileName, text);
-
-	let errors : Array<compiler_range> = compiler.compile([tmpFileName]);
+	let errors : Array<compiler_range> = compiler.compile([textDocument.getText()]);
 	let diagnostics: Diagnostic[] = errors.map(
 		function (error : compiler_range):Diagnostic {
 			let start = error.start;
