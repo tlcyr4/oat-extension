@@ -12,6 +12,10 @@ A Visual Studio Code extension with language support for the Oat language (Princ
 
 ![screenshot](images/oat-extension-features.jpg)
 
+## Configuration
+
+- `oat.compiler.version`: set to 1 for Oat V1 and 2 (default) for Oat V2
+
 ## Known Issues
 
 None
@@ -27,6 +31,14 @@ Initial release.  Supports Oat V1.
 -Fixes for loop code completion
 
 -Enables multiple-error detection
+
+### 0.1.1
+
+- Adds setting to change to Oat V2
+
+- Adds typechecking for Oat V2
+
+- Sets Oat V2 as default
 
 ## Relation to COS320/CIS341
 

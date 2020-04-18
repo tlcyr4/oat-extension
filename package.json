@@ -51,7 +51,17 @@
                 "command": "extension.helloWorld",
                 "title": "Hello World"
             }
-        ]
+        ],
+        "configuration":{
+            "title": "Oat",
+            "properties": {
+                "oat.compiler.version" : {
+                    "type": "number",
+                    "default": 2,
+                    "markDownDescription" : "Specifies which version of the Oat language to use, 1 or 2."
+                }
+            }
+        }
     },
     "scripts": {
         "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
