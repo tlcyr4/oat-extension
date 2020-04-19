@@ -15,8 +15,6 @@ import {
 	Position,
   } from 'vscode-languageserver';
 
-// import {tmpNameSync} from 'tmp';
-// import {writeFileSync} from 'fs';
 declare interface compiler_pos {
 	line : number;
 	char : number;
