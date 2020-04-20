@@ -23,3 +23,16 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Changed
 
 - For loop snippet now includes semicolon for update statement
+
+## [0.2.0] - 2020-04-19
+
+### Added
+
+- Mode for Oat V2
+- Typechecking
+- Handles lexing errors gracefully
+
+### Changed
+
+- Default is now Oat V2
+- Parsing recovery now closes parens before resuming

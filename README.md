@@ -8,9 +8,13 @@ A Visual Studio Code extension with language support for the Oat language (Princ
 
 - Basic syntax error checking
 
+- Type Checking for Oat V2
+
 - Code Completion for common constructs
 
 ![screenshot](images/oat-extension-features.jpg)
+
+![screenshot](images/typecheck-struct.jpg)
 
 ## Configuration
 
@@ -32,13 +36,17 @@ Initial release.  Supports Oat V1.
 
 -Enables multiple-error detection
 
-### 0.1.1
+### 0.2.0
 
 - Adds setting to change to Oat V2
 
 - Adds typechecking for Oat V2
 
 - Sets Oat V2 as default
+
+- Graceful lexing error handling
+
+- Improved parsing error recovery
 
 ## Relation to COS320/CIS341
 
