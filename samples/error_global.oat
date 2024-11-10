@@ -1,0 +1,10 @@
+gobal mistake = "I misspelled 'global'";
+
+it foo(int c) {
+    return 0;
+}
+
+for (var id = exp; cond; update;) {
+
+}
+
