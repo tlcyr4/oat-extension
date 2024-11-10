@@ -53,6 +53,10 @@ Initial release.  Supports Oat V1.
 - Security updates
 - Language icon
 
+#### 0.2.3
+
+- fix README
+
 ## Relation to COS320/CIS341
 
 This extension incorporates logic from the Oat compiler created across the assignments of COS320/CIS341 with permission from Steve Zdancewic.
