@@ -48,9 +48,10 @@ Initial release.  Supports Oat V1.
 
 - Improved parsing error recovery
 
-#### 0.2.1
+#### 0.2.2
 
 - Security updates
+- Language icon
 
 ## Relation to COS320/CIS341
 
