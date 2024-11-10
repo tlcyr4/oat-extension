@@ -12,9 +12,9 @@ A Visual Studio Code extension with language support for the Oat language (Princ
 
 - Code Completion for common constructs
 
-![screenshot](images/oat-extension-features.jpg)
+![screenshot](images/island_counting.jpg)
 
-![screenshot](images/typecheck-struct.jpg)
+![screenshot](images/errors.jpg)
 
 ## Configuration
 
@@ -47,6 +47,10 @@ Initial release.  Supports Oat V1.
 - Graceful lexing error handling
 
 - Improved parsing error recovery
+
+#### 0.2.1
+
+- Security updates
 
 ## Relation to COS320/CIS341
 

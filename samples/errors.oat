@@ -8,3 +8,11 @@ for (var id = exp; cond; update;) {
 
 }
 
+struct T {
+    int f
+}
+
+int program() {
+    var x = new T {f = 1};
+    return x.g;
+}
