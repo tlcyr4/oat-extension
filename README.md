@@ -12,9 +12,9 @@ A Visual Studio Code extension with language support for the Oat language (Princ
 
 - Code Completion for common constructs
 
-![screenshot](images/island_counting.jpg)
+![screenshot](images/island_counting.png)
 
-![screenshot](images/errors.jpg)
+![screenshot](images/errors.png)
 
 ## Configuration
 
