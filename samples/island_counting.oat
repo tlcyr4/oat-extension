@@ -1,0 +1,41 @@
+int count_islands(int[][] ocean, int n) {
+    var count = 0;
+
+    var visited = new bool[][n]{i -> new bool[n]{j -> false}};
+
+    for (var row = 0; row < n; row = row + 1;) {
+        for (var col = 0; col < n; col = col + 1;) {
+            if (!visited[row][col]) {
+                if (ocean[row][col] == 1) {
+                    dfs(ocean, n, row, col, visited);
+                    count = count + 1;
+                } else {
+                    visited[row][col] = true;
+                }
+            }
+        }
+    }
+
+    return count;
+}
+
+void dfs(int[][] ocean, int n, int row, int col, bool[][] visited) {
+    if (visited[row][col]) {
+        return;
+    } else {
+        visited[row][col] = true;
+        if (row > 0) {
+            dfs(ocean, n, row - 1, col, visited);
+        }
+        if (row < n - 1) {
+            dfs(ocean, n, row + 1, col, visited);
+        }
+        if (col > 0) {
+            dfs(ocean, n, row, col - 1, visited);
+        }
+        if (col < n - 1) {
+            dfs(ocean, n, row, col + 1, visited);
+        }
+        return;
+    }
+}

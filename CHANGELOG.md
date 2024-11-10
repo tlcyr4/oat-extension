@@ -36,3 +36,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Default is now Oat V2
 - Parsing recovery now closes parens before resuming
+
+## [0.2.1] - 2024-11-09
+
+### Changed
+
+- Updated dependencies for security updates

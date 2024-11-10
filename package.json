@@ -6,8 +6,8 @@
     "publisher": "tlcyr4",
     "repository": "https://github.com/tlcyr4/oat-extension",
     "license": "MIT",
-    "icon": "images/oats_oat_breakfast_healthy.jpg",
-    "version": "0.1.0",
+    "icon": "images/quaker.png",
+    "version": "0.2.1",
     "engines": {
         "vscode": "^1.43.0"
     },
@@ -30,6 +30,10 @@
                 "extensions": [
                     ".oat"
                 ],
+                "icon": {
+                    "light": "./images/quaker.png",
+                    "dark": "./images/quaker.png"
+                },
                 "configuration": "./language-configuration.json"
             }
         ],
@@ -52,22 +56,25 @@
                 "title": "Hello World"
             }
         ],
-        "configuration":{
+        "configuration": {
             "title": "Oat",
             "properties": {
-                "oat.compiler.version" : {
+                "oat.compiler.version": {
                     "type": "number",
                     "default": 2,
-                    "markDownDescription" : "Specifies which version of the Oat language to use, 1 or 2."
+                    "markDownDescription": "Specifies which version of the Oat language to use, 1 or 2."
                 }
             }
         }
     },
     "scripts": {
-        "vscode:prepublish": "cd client && npm run update-vscode && cd .. && npm run compile",
+        "vscode:prepublish": "npm run compile",
         "compile": "tsc -b",
         "watch": "tsc -b -w",
         "postinstall": "cd client && npm install && cd ../server && npm install && cd ..",
         "test": "sh ./scripts/e2e.sh"
+    },
+    "devDependencies": {
+        "typescript": "^5.6.2"
     }
 }
