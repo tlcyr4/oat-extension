@@ -6,7 +6,7 @@
     "publisher": "tlcyr4",
     "repository": "https://github.com/tlcyr4/oat-extension",
     "license": "MIT",
-    "icon": "images/oats_oat_breakfast_healthy.jpg",
+    "icon": "images/quaker.png",
     "version": "0.1.0",
     "engines": {
         "vscode": "^1.43.0"
